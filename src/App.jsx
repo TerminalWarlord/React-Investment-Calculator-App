@@ -22,7 +22,7 @@ function App() {
     <div>
       <Header />
       <UserInput onInputChange={handleInputChange} userInput={userInput} />
-      <Result userInput={userInput} />
+      {userInput.duration > 0 ? <Result userInput={userInput} /> : <p className='center'>Please enter a valid duration!</p>}
     </div>
   )
 }
